@@ -51,52 +51,55 @@ export default function Home() {
           </a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="row-start-3 flex flex-col w-full bg-gray-200 py-8">
+        <div className="container mx-auto">
+          <table className="mx-auto mb-8">
+            <tr className="text-gray-700">
+              <td className="px-8">
+                <h3 className="font-bold mb-4">Información de contacto</h3>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="mailto:info@example.com" className="hover:text-gray-900">info@example.com</a>
+                  </li>
+                  <li>
+                    <a href="tel:+1234567890" className="hover:text-gray-900">+1234567890</a>
+                  </li>
+                </ul>
+              </td>
+              <td className="px-8">
+                <h3 className="font-bold mb-4">Síguenos en redes sociales</h3>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="https://www.facebook.com/example" className="hover:text-gray-900">Facebook</a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/example" className="hover:text-gray-900">Instagram</a>
+                  </li>
+                  <li>
+                    <a href="https://www.twitter.com/example" className="hover:text-gray-900">Twitter</a>
+                  </li>
+                </ul>
+              </td>
+              <td className="px-8">
+                <h3 className="font-bold mb-4">Legales</h3>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="/privacidad" className="hover:text-gray-900">Aviso de privacidad</a>
+                  </li>
+                  <li>
+                    <a href="/terminos" className="hover:text-gray-900">Términos y condiciones</a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <div className="border-t border-gray-300 pt-4 mt-4">
+          <p className="text-center text-gray-600">
+            &copy; {new Date().getFullYear()} Todos los derechos reservados.
+          </p>
+        </div>
       </footer>
     </div>
   );
