@@ -1,13 +1,28 @@
-import { ChartLine, Menu } from "lucide-react";
+import { ChartLine, Menu, X } from "lucide-react";
 import SimpleButton from "./button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
-const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // Cerrar menú al hacer clic fuera
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const menu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('menu-button');
+            if (menu && menuButton && !menu.contains(event.target as Node) && !menuButton.contains(event.target as Node)) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 w-[80%] bg-header-background py-4 mx-auto">
+        <header className="fixed top-0 left-0 right-0 z-50 w-full bg-header-background/80 backdrop-blur-md py-4">
             <div className="container mx-auto">
-            <div className="flex flex-row justify-between items-center mb-8">
+                <div className="flex flex-row justify-between items-center">
                     <div className="flex items-center">
                         <a href="#" className="flex items-center gap-2">
                             <ChartLine color="#2648f0" absoluteStrokeWidth />
@@ -42,63 +57,61 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
                         
                         {/* Botón de menú para móvil/tablet */}
                         <button 
-                            className="lg:hidden"
+                            id="menu-button"
+                            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
                         >
-                            <Menu size={24} color="#2648f0" />
+                            {isMenuOpen ? <X size={24} color="#2648f0" /> : <Menu size={24} color="#2648f0" />}
                         </button>
                     </div>
                 </div>
 
-                {/* Menú móvil desplegable */}
-                {isMenuOpen && (
-                    <div className="lg:hidden absolute top-full left-0 right-0 w-full bg-white shadow-lg py-4 z-50">
-                        <nav className="flex flex-col">
-                            <ul className="flex flex-col gap-4 px-6">
-                                <li><a href="#" className="hover:text-gray-600">¿Cómo Funciona?</a></li>
-                                <li><a href="#" className="hover:text-gray-600">Beneficios</a></li>
-                                <li><a href="#" className="hover:text-gray-600">Preguntas Frecuentes</a></li>
-                                <li><SimpleButton height="h-9" fontWeight="font-semibold" fontColor="text-white" textMessage="Iniciar Sesión" color="button-main-lp" borderRadius="rounded-2xl" padding="px-6 py-2" fontSize="text-sm" width="w-full" /></li>
-                            </ul>
-                        </nav>
-                    </div>
-                )}
-                
-                {/* Contenido principal - siempre visible */}
-                <div className="flex flex-col items-center gap-4">
-                    <p className="text-gray-700 font-semibold text-3xl text-center my-2">
-                        Convierte tus facturas en liquidez inmediata
-                    </p>
-                    <div className="flex flex-col md:flex-col lg:flex-row items-center gap-4">
-                        <SimpleButton 
-                            height="sm:h-auto md:h-9 lg:h-11" 
-                            fontWeight="font-semibold" 
-                            fontColor="text-white" 
-                            textMessage="Vende tu factura" 
-                            onClick="" 
-                            color="button-main-lp" 
-                            borderRadius="rounded-2xl" 
-                            padding="px-4 py-2" 
-                            margin="mx-auto" 
-                            fontSize="text-md" 
-                            width="w-full lg:w-50" 
-                        />
+                {/* Overlay para el menú móvil */}
+                <div 
+                    className={`fixed inset-0 bg-gradient-to-b from-black/20 to-black/40 backdrop-blur-[2px] transition-all duration-300 lg:hidden z-40 ${
+                        isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                />
 
-                        <SimpleButton 
-                            height="sm:h-auto md:h-9 lg:h-11" 
-                            fontWeight="font-semibold" 
-                            fontColor="text-white" 
-                            textMessage="Invierte ahora" 
-                            onClick="" 
-                            color="button-main-lp" 
-                            borderRadius="rounded-2xl" 
-                            padding="px-4 py-2" 
-                            margin="mx-auto" 
-                            fontSize="text-md" 
-                            width="w-full lg:w-50" 
-                        />
-                    </div>
+                {/* Menú móvil desplegable */}
+                <div 
+                    id="mobile-menu"
+                    className={`lg:hidden fixed top-0 right-0 w-[80%] bg-white/95 backdrop-blur-md shadow-lg py-4 z-50 transform transition-all duration-300 ease-in-out ${
+                        isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+                    }`}
+                >
+                    <nav className="flex flex-col">
+                        <ul className="flex flex-col gap-4 px-6">
+                            <li>
+                                <a href="#" className="block py-2 hover:text-gray-600 transition-colors">¿Cómo Funciona?</a>
+                            </li>
+                            <li>
+                                <a href="#" className="block py-2 hover:text-gray-600 transition-colors">Beneficios</a>
+                            </li>
+                            <li>
+                                <a href="#" className="block py-2 hover:text-gray-600 transition-colors">Preguntas Frecuentes</a>
+                            </li>
+                            <li className="mt-4">
+                                <SimpleButton 
+                                    height="h-9" 
+                                    fontWeight="font-semibold" 
+                                    fontColor="text-white" 
+                                    textMessage="Iniciar Sesión" 
+                                    color="button-main-lp" 
+                                    borderRadius="rounded-2xl" 
+                                    padding="px-6 py-2" 
+                                    fontSize="text-sm" 
+                                    width="w-[200px]" 
+                                    margin="mx-auto"
+                                />
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+                
+            
             </div>
         </header>
     )
