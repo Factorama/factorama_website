@@ -3,7 +3,7 @@ interface ButtonProps {
     width?: string;
     size?: string;
     textMessage?: string;
-    onClick?: string;
+    onClick?: () => void;
     color?: string;
     borderColor?: string;
     borderWidth?: string;
@@ -13,7 +13,6 @@ interface ButtonProps {
     fontSize?: string;
     fontWeight?: string;
     fontColor?: string;
-
 }
 
 export default function SimpleButton(props: ButtonProps) {
@@ -22,7 +21,7 @@ export default function SimpleButton(props: ButtonProps) {
         width = '',
         size = '',
         textMessage = '',
-        onClick = '',
+        onClick,
         color = '',
         borderColor = '',
         borderWidth = '',
@@ -35,7 +34,10 @@ export default function SimpleButton(props: ButtonProps) {
     } = props;
 
     return (
-        <button className={` ${color} ${size} ${onClick}  ${borderColor} ${borderWidth} ${borderRadius} ${padding} ${margin} ${fontSize} ${height} ${width} ${fontWeight} ${fontColor}`}>
+        <button 
+            onClick={onClick}
+            className={`${color} ${size} ${borderColor} ${borderWidth} ${borderRadius} ${padding} ${margin} ${fontSize} ${height} ${width} ${fontWeight} ${fontColor}`}
+        >
             {textMessage}
         </button>
     )
