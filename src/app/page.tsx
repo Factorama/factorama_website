@@ -2,7 +2,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Body from "@/components/body";
-import { useTranslations } from "next-intl";
 
 export default function Home() {
   return (
