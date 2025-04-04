@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     // Cerrar menú al hacer clic fuera
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
