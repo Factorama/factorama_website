@@ -1,10 +1,11 @@
 import { ChartLine, Menu, X } from "lucide-react";
 import SimpleButton from "./button";
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+    const t = useTranslations('Header');
     // Cerrar menú al hacer clic fuera
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
