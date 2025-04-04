@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const t = useTranslations('Header');
     // Cerrar menú al hacer clic fuera
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
