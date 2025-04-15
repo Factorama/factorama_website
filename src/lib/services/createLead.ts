@@ -29,7 +29,7 @@ export async function createLead(
     const config = {
         headers: {
             'Content-Type': 'application/json',
-            'Authentication': `Bearer ${crmToken}`
+            'Authorization': `Bearer ${crmToken}`
         }
     };
 
