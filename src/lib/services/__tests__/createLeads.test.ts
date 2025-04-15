@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { createLead } from '../create_lead';
+import { createLead } from '../createLead';
 
 // Mock de axios
 jest.mock('axios');

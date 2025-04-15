@@ -33,11 +33,16 @@ export async function createLead(
         }
     };
 
-    let response = await axios.post(crmUrl, crmPayload, config);
+    try {
+        let response = await axios.post(crmUrl, crmPayload, config);
 
-    if (response.status === 200 || response.status === 201) {
-        return true;
+        if (response.status === 200 || response.status === 201) {
+            return true;
+        }
+
+        return false;
+    } catch (error) {
+        console.error('Error creating lead:', error);
+        return false;
     }
-
-    return false;
 }
