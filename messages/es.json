@@ -1,4 +1,39 @@
 {
+    "Header": {
+        "section1": "¿Cómo funciona?",
+        "section2": "Beneficios",
+        "section3": "Preguntas frecuentes",
+        "login": "Iniciar sesión"
+    },
+    "Section1":{
+        "title": "Convierte tus facturas en liquidez inmediata",
+        "button": "Empieza ya"
+    },
+    "Section2":{
+        "title": "¿Qué es Factorama?",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "sellInvoiceTitle": "Vendedor de Facturas",
+        "investorTitle": "Inversionista",
+        "sellInvoice": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "investor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    },
+    "Section3":{
+        "title": "¿Por qué Factorama?",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "requirements": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "calculator": "Calculadora de facturas",
+        "termTochose": "Plazo a elegir",
+        "choseTerm": "Elige tu plazo",
+        "selectDays": "días",
+        "resultForm": "Puedes obtener hasta",
+        "buttonTitle": "Empieza ya"
+    },
+    "Section4":{
+        "title": "¿Como funciona Factorama?"
+    },
+    "Section5":{
+        "title": "Preguntas frecuentes"
+    },
     "HeroTranslations": {
         "title": "Convierte tus facturas en liquidez inmediata"
     }

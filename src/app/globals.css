@@ -37,3 +37,7 @@ header {
 .button-main-lp {
   background: var(--button-main-lp)  ;
 }
+
+.title-color {
+  color: #2648f0;
+}
