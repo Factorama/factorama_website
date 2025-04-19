@@ -1,22 +1,23 @@
-import { ChartLine, Menu, X } from "lucide-react";
-import SimpleButton from "./button";
-import { useState, useEffect } from "react";
+import { ChartLine, Menu, X } from "lucide-react"
+import SimpleButton from "@/components/ui/button"
+import { useState, useEffect } from "react"
+import { useTranslations } from "next-intl"
 
 export default function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    // Cerrar menú al hacer clic fuera
+    const t = useTranslations('Header')
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-            const menu = document.getElementById('mobile-menu');
-            const menuButton = document.getElementById('menu-button');
+            const menu = document.getElementById('mobile-menu')
+            const menuButton = document.getElementById('menu-button')
             if (menu && menuButton && !menu.contains(event.target as Node) && !menuButton.contains(event.target as Node)) {
-                setIsMenuOpen(false);
+                setIsMenuOpen(false)
             }
-        };
+        }
 
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => document.removeEventListener('mousedown', handleClickOutside)
+    }, [])
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 w-full bg-header-background/80 backdrop-blur-md py-4">
@@ -32,9 +33,9 @@ export default function Header() {
                     {/* Menú para pantallas grandes */}
                     <nav className="hidden lg:flex items-center py-4">
                         <ul className="flex gap-8">
-                            <li><a href="#" className="hover:text-gray-600">¿Cómo Funciona?</a></li>
-                            <li><a href="#" className="hover:text-gray-600">Beneficios</a></li>
-                            <li><a href="#" className="hover:text-gray-600">Preguntas Frecuentes</a></li>
+                            <li><a href="#" className="hover:text-gray-600">{t('section1')}</a></li>
+                            <li><a href="#" className="hover:text-gray-600">{t('section2')}</a></li>
+                            <li><a href="#" className="hover:text-gray-600">{t('section3')}</a></li>
                         </ul>
                     </nav>
 
@@ -45,13 +46,13 @@ export default function Header() {
                                 height="h-9"
                                 fontWeight="font-semibold"
                                 fontColor="text-white"
-                                textMessage="Iniciar Sesión"
                                 color="button-main-lp"
                                 borderRadius="rounded-2xl"
                                 padding="px-6 py-2"
                                 fontSize="text-sm"
-                                width="w-auto"
-                            />
+                                width="w-auto">
+                                {t('login')}
+                            </SimpleButton>
                         </div>
                         
                         {/* Botón de menú para móvil/tablet */}
@@ -97,14 +98,14 @@ export default function Header() {
                                     height="h-9" 
                                     fontWeight="font-semibold" 
                                     fontColor="text-white" 
-                                    textMessage="Iniciar Sesión" 
                                     color="button-main-lp" 
                                     borderRadius="rounded-2xl" 
                                     padding="px-6 py-2" 
                                     fontSize="text-sm" 
                                     width="w-[200px]" 
-                                    margin="mx-auto"
-                                />
+                                    margin="mx-auto">
+                                    {t('login')}
+                                </SimpleButton>
                             </li>
                         </ul>
                     </nav>

@@ -1,18 +1,18 @@
 interface ButtonProps {
-    height?: string;
-    width?: string;
-    size?: string;
-    textMessage?: string;
-    onClick?: () => void;
-    color?: string;
-    borderColor?: string;
-    borderWidth?: string;
-    borderRadius?: string;
-    padding?: string;
-    margin?: string;
-    fontSize?: string;
-    fontWeight?: string;
-    fontColor?: string;
+    height?: string
+    width?: string
+    size?: string
+    children: React.ReactNode
+    onClick?: () => void
+    color?: string
+    borderColor?: string
+    borderWidth?: string
+    borderRadius?: string
+    padding?: string
+    margin?: string
+    fontSize?: string
+    fontWeight?: string
+    fontColor?: string
 }
 
 export default function SimpleButton(props: ButtonProps) {
@@ -20,7 +20,6 @@ export default function SimpleButton(props: ButtonProps) {
         height = '',
         width = '',
         size = '',
-        textMessage = '',
         onClick,
         color = '',
         borderColor = '',
@@ -30,15 +29,16 @@ export default function SimpleButton(props: ButtonProps) {
         margin = '',
         fontSize = '',
         fontWeight = '',
-        fontColor = ''
-    } = props;
+        fontColor = '',
+        children
+    } = props
 
     return (
         <button 
             onClick={onClick}
             className={`${color} ${size} ${borderColor} ${borderWidth} ${borderRadius} ${padding} ${margin} ${fontSize} ${height} ${width} ${fontWeight} ${fontColor}`}
         >
-            {textMessage}
+            {children}
         </button>
     )
 }

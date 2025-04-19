@@ -1,4 +1,39 @@
 {
+    "Header": {
+        "section1": "How it works?",
+        "section2": "Benefits",
+        "section3": "FAQ's",
+        "login": "Login"
+    },
+    "Section1":{
+        "title": "Turn your invoices into immediate liquidity",
+        "button": "Start now"
+    },
+    "Section2":{
+        "title": "How is Factorama?",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "sellInvoiceTitle": "Vendedor de Facturas",
+        "investorTitle": "Inversionista",
+        "sellInvoice": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "investor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    },
+    "Section3":{
+        "title": "Why Factorama?",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "requirements": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "calculator": "Invoice calculator",
+        "termTochose": "Term to choose",
+        "choseTerm": "Choos your term",
+        "selectDays": "days",
+        "resultForm": "You can get up to",
+        "buttonTitle": "Start now"
+    },
+    "Section4":{
+        "title": "How it works?"
+    },
+    "Section5":{
+        "title": "FAQ's"
+    },
     "HeroTranslations": {
         "title": "Convert your bill into cash"
     }
