@@ -5,22 +5,29 @@
         "section3": "Preguntas frecuentes",
         "login": "Iniciar sesión"
     },
+    "Footer": {
+        "contact": "Contacto",
+        "social": "Redes soiales",
+        "legal": "Legal",
+        "privacy": "Aviso de privacidad",
+        "terms": "Términos y condiciones"
+    },
     "Section1":{
         "title": "Convierte tus facturas en liquidez inmediata",
         "button": "Empieza ya"
     },
     "Section2":{
-        "title": "¿Qué es Factorama?",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "title": "¿Qué es Facturna?",
+        "description": "En Facturna, ayudamos a las pequeñas y medianas empresas, así como a emprendedores y freelancers, a obtener la liquidez que necesitan de manera rápida y sencilla. Transformamos tus facturas pendientes en recursos inmediatos, para que puedas seguir enfocado en hacer crecer tu negocio sin preocuparte por los plazos de pago. Nuestro compromiso es ofrecerte soluciones financieras flexibles, transparentes y adaptadas a tus necesidades, acompañándote en cada paso de tu desarrollo.",
         "sellInvoiceTitle": "Vendedor de Facturas",
         "investorTitle": "Inversionista",
-        "sellInvoice": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-        "investor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        "sellInvoice": "Libera tu flujo de caja. Con Factorma, puedes transformar tus facturas en dinero inmediato sin esperar los plazos de pago. Obtén liquidez de manera rápida, flexible y sin complicaciones, para que puedas seguir creciendo sin preocupaciones.",
+        "investor": "Invierte con confianza. Como inversor, puedes fondear las campañas de empresas que necesitan liquidez, obteniendo rendimientos atractivos y respaldados por facturas verídicas y verificables. Tu inversión trabaja para ti mientras apoyas el crecimiento de otros negocios."
     },
     "Section3":{
-        "title": "¿Por qué Factorama?",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "requirements": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "title": "¿Por qué Facturna?",
+        "description": "Conectamos a empresas que necesitan liquidez con inversionistas que buscan oportunidades seguras y rentables. Nuestro modelo ofrece flexibilidad, procesos ágiles y total transparencia para ambas partes.",
+        "requirements": "Necesitarás una identificación oficial vigente, una cuenta bancaria a tu nombre, un historial crediticio sólido y comprobantes de ingresos.",
         "calculator": "Calculadora de facturas",
         "termTochose": "Plazo a elegir",
         "choseTerm": "Elige tu plazo",
@@ -29,10 +36,32 @@
         "buttonTitle": "Empieza ya"
     },
     "Section4":{
-        "title": "¿Como funciona Factorama?"
+        "title": "¿Como funciona Facturna?"
     },
     "Section5":{
-        "title": "Preguntas frecuentes"
+        "title": "Preguntas frecuentes",
+        "questions": {
+            "q1": {
+                "question": "¿Cómo puedo acceder a los fondos rápidamente?",
+                "answer": "Una vez que tus facturas son aprobadas, el proceso de liberación de fondos es ágil y sin complicaciones. Puedes contar con la liquidez que necesitas en poco tiempo."
+            },
+            "q2": {
+                "question": "¿Hay algún costo oculto o cargos adicionales?",
+                "answer": "No, en Factorma no tienes costos ocultos. Nuestro proceso es transparente y solo se aplican los cargos previamente establecidos y acordados."
+            },
+            "q3": {
+                "question": "¿Qué tipo de facturas puedo vender?",
+                "answer": "Aceptamos facturas verificables de cualquier sector. Solo necesitas que tus facturas estén respaldadas por empresas confiables y con plazos de pago claros."
+            },
+            "q4": {
+                "question": "¿Cómo puedo asegurarme de que mi inversión es segura?",
+                "answer": "Trabajamos con un proceso de verificación rigurosa de las facturas, garantizando que las empresas que reciban financiamiento sean confiables y transparentes."
+            },
+            "q5": {
+                "question": "¿Cómo puedo asegurarme de que mi inversión es segura?",
+                "answer": "Trabajamos con un proceso de verificación rigurosa de las facturas, garantizando que las empresas que reciban financiamiento sean confiables y transparentes."
+            }
+        }
     },
     "HeroTranslations": {
         "title": "Convierte tus facturas en liquidez inmediata"

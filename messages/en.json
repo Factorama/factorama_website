@@ -5,22 +5,29 @@
         "section3": "FAQ's",
         "login": "Login"
     },
+    "Footer": {
+        "contact": "Contact",
+        "social": "Social media",
+        "legal": "Legal",
+        "privacy": "Privacy Policy",
+        "terms": "Terms and Conditions"
+    },
     "Section1":{
         "title": "Turn your invoices into immediate liquidity",
         "button": "Start now"
     },
     "Section2":{
-        "title": "How is Factorama?",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "sellInvoiceTitle": "Vendedor de Facturas",
-        "investorTitle": "Inversionista",
-        "sellInvoice": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-        "investor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        "title": "How is Facturna?",
+        "description": "At Facturna, we help small and medium-sized businesses, as well as entrepreneurs and freelancers, get the liquidity they need quickly and easily. We turn your outstanding invoices into immediate resources so you can focus on growing your business without worrying about payment terms. Our commitment is to offer flexible, transparent, and tailored financial solutions, supporting you every step of the way.",
+        "sellInvoiceTitle": "Invoice Seller",
+        "investorTitle": "Investor",
+        "sellInvoice": "Free up your cash flow. With Facturna, you can convert your invoices into immediate funds without waiting for payment terms. Get fast, flexible, and hassle-free liquidity so you can keep growing without worries.",
+        "investor": "Invest with confidence. As an investor, you can fund campaigns from companies in need of liquidity, earning attractive returns backed by authentic and verified invoices. Your investment works for you while helping other businesses grow."
     },
     "Section3":{
-        "title": "Why Factorama?",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "requirements": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "title": "Why Facturna?",
+        "description": "We connect businesses in need of liquidity with investors seeking secure and profitable opportunities. Our model offers flexibility, fast processes, and complete transparency for both parties.",
+        "requirements": "You’ll need a valid government-issued ID, a bank account in your name, a solid credit history, and proof of income.",
         "calculator": "Invoice calculator",
         "termTochose": "Term to choose",
         "choseTerm": "Choos your term",
@@ -32,7 +39,29 @@
         "title": "How it works?"
     },
     "Section5":{
-        "title": "FAQ's"
+        "title": "FAQ's",
+        "questions": {
+            "q1": {
+                "question": "How can I access funds quickly?",
+                "answer": "Once your invoices are approved, the fund disbursement process is fast and straightforward. You’ll have access to the liquidity you need in no time."
+            },
+            "q2": {
+                "question": "Are there any hidden fees or extra charges?",
+                "answer": "No, Facturna has no hidden fees. Our process is transparent and only includes previously established and agreed-upon charges."
+            },
+            "q3": {
+                "question": "What types of invoices can I sell?",
+                "answer": "We accept verifiable invoices from any sector. Your invoices just need to be backed by trustworthy companies with clear payment terms."
+            },
+            "q4": {
+                "question": "How can I ensure my investment is secure?",
+                "answer": "We apply a strict verification process to all invoices, ensuring that the businesses receiving funding are reliable and transparent."
+            },
+            "q5": {
+                "question": "How can I ensure my investment is secure?",
+                "answer": "We apply a strict verification process to all invoices, ensuring that the businesses receiving funding are reliable and transparent."
+            }
+        }
     },
     "HeroTranslations": {
         "title": "Convert your bill into cash"

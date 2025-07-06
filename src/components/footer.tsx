@@ -1,12 +1,16 @@
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
+import { useTranslations } from "next-intl"
+
+
 export default function Footer() {
+    const t = useTranslations('Footer')
     return (
         <footer className="w-full bg-footer-background py-2">
             <div className="container mx-auto">
                 <div className="mx-auto">
                     <div className="text-gray-700 flex flex-col md:flex-row md:justify-between gap-2">
                         <div className="px-2 align-top">
-                            <h3 className="font-bold mb-1 text-xs">Contacto</h3>
+                            <h3 className="font-bold mb-1 text-xs">{t('contact')}</h3>
                             <ul className="space-y-0.5 block text-xs">
                                 <li>
                                     <a href="mailto:info@example.com" className="hover:text-gray-900">info@example.com</a>
@@ -17,8 +21,8 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div className="px-2 align-top">
-                            <h3 className="font-bold mb-1 text-xs">Redes sociales</h3>
-                            <ul className="flex gap-2 flex-wrap">
+                            <h3 className="font-bold mb-1 text-xs text-center">{t('social')}</h3>
+                            <ul className="flex gap-5 flex-wrap">
                                 <li>
                                     <a href="https://www.facebook.com/example" className="hover:text-gray-900 text-blue-600"><Facebook className="w-4 h-4" /></a>
                                 </li>
@@ -34,13 +38,13 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div className="px-2 align-top">
-                            <h3 className="font-bold mb-1 text-xs">Legal</h3>
+                            <h3 className="font-bold mb-1 text-xs">{t('legal')}</h3>
                             <ul className="space-y-0.5 block text-xs">
                                 <li>
-                                    <a href="/privacidad" className="hover:text-gray-900">Privacidad</a>
+                                    <a href="/privacidad" className="hover:text-gray-900">{t('privacy')}</a>
                                 </li>
                                 <li>
-                                    <a href="/terminos" className="hover:text-gray-900">Términos</a>
+                                    <a href="/terminos" className="hover:text-gray-900">{t('terms')}</a>
                                 </li>
                             </ul>
                         </div>
