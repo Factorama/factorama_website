@@ -1,4 +1,4 @@
-import { ChartLine, Menu, X } from "lucide-react"
+import { ChartLine, Menu, X, Globe } from "lucide-react"
 import SimpleButton from "@/components/ui/button"
 import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
@@ -26,7 +26,7 @@ export default function Header() {
                     <div className="flex items-center">
                         <a href="#" className="flex items-center gap-2">
                             <ChartLine color="#2648f0" absoluteStrokeWidth />
-                            <span className="font-semibold text-xl">Factorama</span>
+                            <span className="font-semibold text-xl">Facturna</span>
                         </a>
                     </div>
 
@@ -40,6 +40,14 @@ export default function Header() {
                     </nav>
 
                     <div className="flex items-center gap-4">
+                        <div className="flex items-center text-blue-600">
+                            <a href="https://www.facebook.com/example" 
+                                className="hover:text-gray-900 text-blue-600 mr-3">
+                                <Globe className="w-4 h-4" />
+                            </a>
+                            <span className="font-bold">Es</span> / <span>En</span>
+                        </div>
+                        
                         {/* Botón de inicio de sesión - solo visible en desktop */}
                         <div className="hidden lg:block">
                             <SimpleButton 
@@ -85,13 +93,13 @@ export default function Header() {
                     <nav className="flex flex-col">
                         <ul className="flex flex-col gap-4 px-6">
                             <li>
-                                <a href="#" className="block py-2 hover:text-gray-600 transition-colors">¿Cómo Funciona?</a>
+                                <a href="#" className="block py-2 hover:text-gray-600 transition-colors">{t('section1')}</a>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 hover:text-gray-600 transition-colors">Beneficios</a>
+                                <a href="#" className="block py-2 hover:text-gray-600 transition-colors">{t('section2')}</a>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 hover:text-gray-600 transition-colors">Preguntas Frecuentes</a>
+                                <a href="#" className="block py-2 hover:text-gray-600 transition-colors">{t('section3')}</a>
                             </li>
                             <li className="mt-4">
                                 <SimpleButton 
